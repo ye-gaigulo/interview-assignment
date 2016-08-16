@@ -11,7 +11,7 @@ Projects API - Login
 		<div class="col-md-6 col-md-offset-2">
 			<div class="col-sm-12">
 				{!! Form::label('user_service', 'Web Service: ')!!}
-				{!! Form::text('user_service', 'http://userservice.staging.tangentmicroservices.com:80/apitokenauth/', ['class' => 'form-control']) !!}
+				{!! Form::text('user_service', 'http://userservice.staging.tangentmicroservices.com:80/api-token-auth/', ['class' => 'form-control']) !!}
 				
 			</div>
 		</div>

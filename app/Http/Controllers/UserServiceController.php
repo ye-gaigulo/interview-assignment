@@ -10,13 +10,7 @@ use Curl;
 
 class UserServiceController extends Controller
 {
-	public function sendGetData($uri, $data){
-
-	// cURL HTTP GET request with Json data object
-    	return Curl::to($uri)->withData($data)->asJson()->get();
-    }
-
-    public function sendPostData($uri, $data){
+	public function sendPostData($uri, $data){
 
 	// cURL HTTP POST request with Json data object     	
     	return Curl::to($uri)->withData($data)->asJson()->post();
