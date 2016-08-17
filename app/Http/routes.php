@@ -15,4 +15,7 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::post('/projects', ['as' => 'collect.auth', 'uses' => 'UserServiceController@collectAuthToken']);
+Route::post('/login/admin', ['as' => 'collect.auth', 'uses' => 'UserServiceController@login']);
+
+Route::resource('projects', 'ProjectServiceController');
+

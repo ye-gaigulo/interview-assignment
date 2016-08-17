@@ -6,9 +6,7 @@ Projects API - Projects Index
 
 @section('content')
 
-<?php
-	var_dump ($authToken);
-?> 
+{{ $projectList }}
 
 @endsection
 
@@ -16,5 +14,6 @@ Projects API - Projects Index
 
 
 @endsection
+
 
 

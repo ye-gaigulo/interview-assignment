@@ -10,15 +10,16 @@ use Curl;
 
 class UserServiceController extends Controller
 {
+	
 	public function sendPostData($uri, $data){
-
-	// cURL HTTP POST request with Json data object     	
-    	return Curl::to($uri)->withData($data)->asJson()->post();
+	
+		// cURL HTTP POST request with Json data object         
+        return Curl::to($uri)->withData($data)->asJson()->post();
     }
 
-    public function collectAuthToken(Request $request){
+    public function login(Request $request){
 
-    // validate username and password: required
+    	// validate username and password: required
 	   	$uri = $request->input('user_service');
     	$data = array('username' => $request->input('username'),
     				  'password' => $request->input('password') 
@@ -26,8 +27,10 @@ class UserServiceController extends Controller
     
     	$authToken = $this->sendPostData($uri, $data);
 
-    	return view('projects.view')->with('authToken', $authToken);
-    	
+    	// If authToken was created start the session
+    	// store session variables
+
+    	return view('projects.intro');
     }
 }
 
