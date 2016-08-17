@@ -29,9 +29,8 @@
 		@include('partials.footer')
 	</div>
 	
-	<!-- fix this chevron for scrolling back to the top of the screen -->
 	<div id="back-top" style="display: none;">
-	    <a href="http://localhost/1st-tender/index.html#header"><i class="fa fa-chevron-up"></i></a>
+	    <a href="#"><i class="fa fa-chevron-up"></i></a>
 	</div>	
 
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
